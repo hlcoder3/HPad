@@ -15,7 +15,7 @@ public class HPad {
 	{
 		// TODO Auto-generated method stub
 		HPad pad=new HPad();
-
+sdfsdfsd
 	}
 
 }
