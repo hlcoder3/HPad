@@ -1,3 +1,5 @@
+import javax.swing.JFrame;
+
 /**
  * 
  */
@@ -13,9 +15,9 @@ public class HPad {
 	 */
 	public static void main(String[] args) 
 	{
-		
-		HPad pad=new HPad();
-
+		JFrame frame=new HPadFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 	}
 
 }
