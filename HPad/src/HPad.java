@@ -4,11 +4,8 @@ import javax.swing.JFrame;
  * 
  */
 
-/**
- * @author lutfi
- *
- */
-public class HPad {
+public class HPad
+{
 
 	/**
 	 * @param args
