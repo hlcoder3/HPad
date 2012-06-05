@@ -1,5 +1,12 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 
@@ -10,6 +17,28 @@ public class HPadFrame extends JFrame
 	private final JTextArea text;
 	private JPanel panel;
 	
-	public HPadFrame(){}
+	public HPadFrame()
+	{
+		JMenuBar menuBar=new JMenuBar();
+		setJMenuBar(menuBar);
+
+		menuBar.add(createFileMenu());
+		menuBar.add(createEditMenu());
+		menuBar.add(createFontMenu());
+		menuBar.add(createHelpMenu());
+		setSize(FRAME_WIDTH,FRAME_HEIGHT);
+		
+		panel=new JPanel();
+		panel.setLayout(new BorderLayout());
+		panel.setBorder(BorderFactory.createLineBorder(Color.MAGENTA));
+		
+		text = new JTextArea(10,20);
+	    text.setFont( new Font("Serif",Font.PLAIN,16));  
+	   
+	    JScrollPane scrollPane = new JScrollPane(text);
+	    panel.add(scrollPane,BorderLayout.CENTER);
+		this.add(panel);
+		this.setTitle("HPad");	
+	}
 
 }
