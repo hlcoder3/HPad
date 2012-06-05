@@ -4,6 +4,7 @@ import java.awt.Font;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -41,4 +42,19 @@ public class HPadFrame extends JFrame
 		this.setTitle("HPad");	
 	}
 
+	
+	//******************** FILE MENU ******************//
+	
+	public JMenu createFileMenu()
+	{
+		JMenu menu=new JMenu ("File");
+		menu.add(createFileNewItem());
+		menu.add(createFileOpenItem());
+		menu.add(createFileSaveItem());
+		menu.add(createFileSaveAsItem());
+		menu.add(createFilePrintItem());
+		menu.add(createFileExitItem());
+		
+		return menu;
+	}
 }
